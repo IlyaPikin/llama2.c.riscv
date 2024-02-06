@@ -67,7 +67,7 @@ testc:
 VERBOSITY ?= 0
 .PHONY: testcc
 testcc:
-	$(CC) -DVERBOSITY=$(VERBOSITY) -O3 -march=rv64gcv0p7 -mabi=lp64d -o testc test.c -lm -Wno-unused-result
+	$(CC) -DVERBOSITY=$(VERBOSITY) -O2 -g -fno-omit-frame-pointer -march=rv64gcv0p7 -mabi=lp64d -o testc test.c -lm -Wno-unused-result
 
 .PHONY: clean
 clean:
